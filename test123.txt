@@ -1,0 +1,19 @@
+# Copy only modified files
+replace "<Source Folder>\*" "<Destination Folder>" /u
+
+# XCOPY replace if its present
+xcopy "<Source Folder>\*" "<Destinatoin Folder>" /S /Y /D 
+
+# Windows Service start stop
+net start <Win Service Name>
+net stop <Win Service Name>
+
+# Display Date Time
+echo %DATE% %TIME%
+
+# Wait for seconds 
+TIMEOUT 2
+
+# Start/Stop IIS App pool by name
+appcmd stop apppool TenantApp2
+appcmd start apppool TenantApp2
